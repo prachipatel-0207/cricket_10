@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: transform
+    description: One row per transaction ID after Bronze text is cleaned.
+    columns:
+      - name: DELIVERY_ID
+        data_tests:
+          - not_null
+          - unique
+  - name: dim_match
+    columns:
+      - name: MATCH_ID
+        data_tests:
+          - not_null
+          - unique
+  - name: dim_venue
+    columns:
+      - name : VENUE_ID
+        data_tests:
+          - not_null
+          - unique
+  - name : dim_match 
+    columns:
+      - name : TEAM_ID
+        data_tests : 
+          -not_null
+          -unique
+  - name : dim_drs
+    columns:
+      - name : DRS_REVIEW_ID
+        data_tests : 
+          -not_null
+          -unique
+  - name : dim_batsman
+    columns:
+      - name : BATSMAN_ID
+        data_tests : 
+          -not_null
+          -unique
+  - name : dim_bowler
+    columns:
+      - name : BOWLER_ID
+        data_tests : 
+          -not_null
+          -unique 
+    
+    
+  

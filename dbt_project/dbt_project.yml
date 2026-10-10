@@ -1,0 +1,24 @@
+﻿name: 'capstone_dbt'
+version: '1.0.0'
+
+profile: 'capstone_dbt'
+
+model-paths: [models]
+analysis-paths: [analyses]
+test-paths: [tests]
+seed-paths: [seeds]
+macro-paths: [macros]
+snapshot-paths: [snapshots]
+
+clean-targets:
+  - target
+  - dbt_packages
+
+models:
+  capstone_dbt:
+    silver:
+      +schema: silver
+      +materialized: view
+    gold:
+      +schema: gold
+      +materialized: view

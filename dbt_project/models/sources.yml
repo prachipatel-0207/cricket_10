@@ -1,0 +1,9 @@
+﻿version: 2
+
+sources:
+  - name: bronze
+    database: "{{ env_var('SNOWFLAKE_DATABASE', 'CAPSTONE_CRICKET') }}"
+    schema: BRONZE
+    tables:
+      - name: RAW_CRICKET
+        description: None
